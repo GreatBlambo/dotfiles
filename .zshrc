@@ -83,3 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Add alias for todo
+alias t='~/bin/todo.txt-cli/todo.sh -d ~/todo.txt-cli/todo.cfg'
