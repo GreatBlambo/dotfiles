@@ -1,3 +1,5 @@
+let maplader = ","
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -11,8 +13,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-dispatch'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
@@ -21,6 +23,10 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'felixhummel/setcolors.vim'
 Plugin 'vhdirk/vim-cmake'
+Plugin 'tpope/vim-obsession'
+Plugin 'dhruvasagar/vim-prosession'
+Plugin 'honza/vim-snippets'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -37,14 +43,35 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+"Configure syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"Configure airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+"Don't create swap files
+set noswapfile
+
+"Set color schene
 colo triplejelly 
 
+"Set indentation
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
+"Set relative numbers
 set relativenumber
 set number
-
-noremap <C-n> :call NumberToggle()<cr>
