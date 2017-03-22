@@ -1,4 +1,4 @@
-if ! type -P zsh > /dev/null; then
+if ! type zsh > /dev/null; then
     echo "Please install zsh before running this script"
     exit 1
 fi
