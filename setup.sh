@@ -11,7 +11,7 @@ git clone https://github.com/ginatrapani/todo.txt-cli.git bin/todo
 BASEDIR=$(dirname "$0")
 
 # Copy bin folder
-cp -R $BASEDIR/bin ~/bin
+cp -R $BASEDIR/bin/* ~/bin
 
 # Install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
