@@ -81,3 +81,6 @@ syntax on
 
 "Autocmd
 au BufWritePost *.c silent! Make!
+au BufWritePost *.h silent! Make!
+au BufRead *.c set cindent
+au BufRead *.h set cindent
