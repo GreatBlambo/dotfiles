@@ -75,3 +75,6 @@ set expandtab
 "Set relative numbers
 set relativenumber
 set number
+
+"Turn on syntax highlighting
+syntax on

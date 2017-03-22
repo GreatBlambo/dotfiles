@@ -85,4 +85,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Add alias for todo
-alias t='~/bin/todo.txt-cli/todo.sh -d ~/.todo.cfg'
+alias t='~/bin/todo/todo.sh -d ~/.todo.cfg'
