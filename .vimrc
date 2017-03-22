@@ -78,3 +78,6 @@ set number
 
 "Turn on syntax highlighting
 syntax on
+
+"Autocmd
+au BufWritePost *.c silent! Make!
